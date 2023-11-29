@@ -1,0 +1,30 @@
+[
+    {
+        "firstName": "Joshua",
+        "lastName": "Joshua",
+        "username": "joshua",
+        "password": "12345678",
+        "speciality": "Backend"
+    },
+    {
+        "firstName": "Wendy",
+        "lastName": "Wendy",
+        "username": "wendy",
+        "password": "12345678",
+        "speciality": "Hashira"
+    },
+    {
+        "firstName": "Rudy",
+        "lastName": "Rudy",
+        "username": "rudy",
+        "password": "12345678",
+        "speciality": "Debug"
+    },
+    {
+        "firstName": "Ardy",
+        "lastName": "Ardy",
+        "username": "ardy",
+        "password": "12345678",
+        "speciality": "Devops"
+    }
+]
