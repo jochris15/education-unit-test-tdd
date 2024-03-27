@@ -11,7 +11,6 @@ describe('POST /register', () => {
             expect(response.status).toBe(201) // testing untuk codenya
             expect(response.body).toBeInstanceOf(Object) // testing untuk isinya
             expect(response.body).toHaveProperty('message', 'New user has been registered')
-            console.log(response.body);
         })
     })
 
@@ -23,7 +22,6 @@ describe('POST /register', () => {
             expect(response.status).toBe(400) // testing untuk codenya
             expect(response.body).toBeInstanceOf(Object) // testing untuk isinya
             expect(response.body).toHaveProperty('message', expect.any(String))
-            console.log(response.body);
         })
 
         it('should be return an object with error message', async () => {

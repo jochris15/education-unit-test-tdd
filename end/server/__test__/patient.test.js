@@ -34,7 +34,7 @@ beforeAll(async () => {
     // access token
     const payload = {
         id: 1,
-        username: 'Taufik',
+        username: 'Test',
         role: 'Patient'
     }
 
@@ -57,8 +57,7 @@ describe('GET /patients', () => {
             expect(response.body).toBeInstanceOf(Object) // testing untuk isinya
             expect(response.body).toHaveProperty('message', 'Succed read data patients')
             expect(response.body).toHaveProperty('patients', expect.any(Array))
-
-            console.log(response.body);
+            expect(response.body.patients.length).toBeGreaterThan(0)
         })
     })
 })
