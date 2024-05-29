@@ -1,32 +1,42 @@
 const express = require('express')
 const app = express()
 const port = 3000
-const { Patient, User } = require('./models')
 const authentication = require('./middlewares/authentication')
+const { User, Event } = require('./models')
 
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
-// Endpoint
 app.post('/register', async (req, res, next) => {
     try {
-        const { username, password, role } = req.body
-        const user = await User.create({ username, password, role })
+        const { email, password } = req.body
+
+        const user = await User.create({ email, password, role: "staff" })
 
         res.status(201).json({
-            message: 'New user has been registered'
+            message: "Succeed register new user",
+            user: {
+                email: user.email,
+                role: user.role
+            }
         })
-    } catch (error) {
+    } catch (err) {
         let status = 500
         let message = 'Internal Server Error'
-        if (error.name == 'SequelizeValidationError') {
+
+        if (err.name == 'SequelizeValidationError') {
             status = 400
-            message = error.errors[0].message
+            message = err.errors[0].message
         }
 
-        if (error.name == 'SequelizeDatabaseError') {
+        if (err.name == 'SequelizeUniqueConstraintError') {
             status = 400
-            message = 'Invalid Data type'
+            message = err.errors[0].message
+        }
+
+        if (err.name == 'SequelizeDatabaseError' || err.name == 'SequelizeForeignKeyConstraintError') {
+            status = 400
+            message = 'Invalid input'
         }
 
         res.status(status).json({
@@ -35,19 +45,26 @@ app.post('/register', async (req, res, next) => {
     }
 })
 
-app.use(authentication)
+// app.use(authentication)
 
-app.get('/patients', async (req, res, next) => {
+app.get('/events', async (req, res, next) => {
     try {
-        const patients = await Patient.findAll()
+        const events = await Event.findAll({
+            attributes: {
+                exclude: ['createdAt', 'updatedAt']
+            }
+        })
 
         res.status(200).json({
-            message: "Succed read data patients",
-            patients
+            message: "Succeed read events",
+            events
         })
-    } catch (error) {
-        res.status(500).json({
-            message: "Internal Server Error"
+    } catch (err) {
+        let status = 500
+        let message = 'Internal Server Error'
+
+        res.status(status).json({
+            message
         })
     }
 })

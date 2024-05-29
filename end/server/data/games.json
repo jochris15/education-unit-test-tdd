@@ -1,0 +1,58 @@
+[
+    {
+        "name": "League of Legends: Wild Rift",
+        "gameImg": "https://www.riotgames.com/darkroom/1440/08bcc251757a1f64e30e0d7e8c513d35:be16374e056f8268996ef96555c7a113/wr-cb1-announcementarticle-banner-1920x1080.png",
+        "releaseDate": "2020-10-27",
+        "developer": "Riot Games",
+        "genre": "MOBA"
+    },
+    {
+        "name": "Mobile Legends: Bang Bang",
+        "gameImg": "https://cdn0-production-images-kly.akamaized.net/Hyl2S_OHDEDCGayRTeriz3hPi38=/1200x675/smart/filters:quality(75):strip_icc():format(jpeg)/kly-media-production/medias/3488932/original/008102000_1624278462-Mobile_Legends_11.jpg",
+        "releaseDate": "2016-07-14",
+        "developer": "Moonton",
+        "genre": "MOBA"
+    },
+    {
+        "name": "Arena Of Valor",
+        "gameImg": "https://gamebrott.com/wp-content/uploads/2020/11/arena_of_valor.jpg",
+        "releaseDate": "2016-10-13",
+        "developer": "Tencent Games",
+        "genre": "MOBA"
+    },
+    {
+        "name": "DOTA 2",
+        "gameImg": "https://cdn.akamai.steamstatic.com/steam/apps/570/header.jpg?t=1662588548",
+        "releaseDate": "2013-07-09",
+        "developer": "Valve Corporation",
+        "genre": "MOBA"
+    },
+    {
+        "name": "VALORANT",
+        "gameImg": "https://cdn1-production-images-kly.akamaized.net/2cz3nNAb61C_WtZDIByp9jys2Ww=/1200x675/smart/filters:quality(75):strip_icc():format(jpeg)/kly-media-production/medias/3142622/original/000361800_1591163362-valorant-2.jpg",
+        "releaseDate": "2020-06-02",
+        "developer": "Riot Games",
+        "genre": "FPS"
+    },
+    {
+        "name": "CS:GO",
+        "gameImg": "https://estnn.com/wp-content/uploads/2022/05/20491388.jpg",
+        "releaseDate": "2012-08-21",
+        "developer": "Valve Corporation",
+        "genre": "FPS"
+    },
+    {
+        "name": "Garena Free Fire",
+        "gameImg": "https://aidsindonesia.or.id/wp-content/uploads/2021/12/Garena-Free-Fire.jpg",
+        "releaseDate": "2017-12-04",
+        "developer": "111dots Studio",
+        "genre": "BR"
+    },
+    {
+        "name": "PUBG Mobile",
+        "gameImg": "https://c4.wallpaperflare.com/wallpaper/320/205/156/pubg-mobile-wallpaper-preview.jpg",
+        "releaseDate": "2018-03-19",
+        "developer": "Tencent Games",
+        "genre": "BR"
+    }
+]

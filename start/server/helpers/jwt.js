@@ -1,12 +1,14 @@
-const jwt = require('jsonwebtoken')
-const secretKey = "test"
+const jwt = require('jsonwebtoken');
+const secretKey = "inigaaman"
 
-const createToken = (payload) => {
+// encode / encrypt
+const signToken = (payload) => {
     return jwt.sign(payload, secretKey)
 }
 
+// decode / decrypt
 const verifyToken = (token) => {
     return jwt.verify(token, secretKey)
 }
 
-module.exports = { createToken, verifyToken }
+module.exports = { signToken, verifyToken }

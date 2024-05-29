@@ -94,6 +94,9 @@ describe('test function math', () => {
 
 [Dokumentasi Skip](https://jestjs.io/docs/api#testskipname-fn) & [Dokumentasi Only](https://jestjs.io/docs/api#testonlyname-fn-timeout)
 
+<hr>
+
+# Implementation to REST API
 ### Environment (config)
 Environment yang kita gunakan adalah testing, database yang kita gunakan pun juga berbeda
 setting config test untuk menyesuaikan database yang kita gunakan
@@ -122,6 +125,14 @@ Setting properti test dalam script dengan
 - --detectOpenHandles = untuk ngedetect operasi asynchronus
 - --forceExit = untuk ngeforce jestnya supaya berhenti
 
+### Expectation & Matchers
+untuk mengecheck ekspektasi dari endpoint kita, kita akan mengecheck hasil dari response. Karena sesuai dengan apps kita menghasilkan sebuah object dan juga status code, jadi akan berekspektasi seperti dibawah :
+
+```js
+expect(response.status).toBe(201) // untuk mengecheck status codenya
+expect(response.body).toBeInstanceOf(Object) // untuk mengecheck dia object atau bukan
+expect(response.body).toHaveProperty('message', expect.any(String)) // untuk mengecheck isi dari objectnya memiliki property message dan isi messagenya string apapun
+```
 
 ### Lifecyle testing
 bisa dimanfaatkan untuk menjalankan suatu code sebelum / sesudah proses testing berjalan, ex : seeding

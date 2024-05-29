@@ -2,17 +2,16 @@
   "development": {
     "username": "postgres",
     "password": "postgres",
-    "database": "JcHospital",
+    "database": "esport_game",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "test": {
     "username": "postgres",
     "password": "postgres",
-    "database": "jchtest",
+    "database": "esport_game_test",
     "host": "127.0.0.1",
-    "dialect": "postgres",
-    "port": 2000
+    "dialect": "postgres"
   },
   "production": {
     "username": "root",

@@ -1,0 +1,68 @@
+[
+	{
+		"name": "League of Legends: Wild Rift - National E-Sports",
+		"description": "Thank you to all the teams who competed during the season one global championship! We also want to give a huge shout out to all the fans who tuned in during Icons and made this event unforgettable. While this season has wrapped up, stay tuned for more Wild Rift esports announcements coming soon!",
+		"totalPrize": 12000000,
+		"eventPoster": "https://i.ytimg.com/vi/TrXQ6_LCBFU/maxresdefault.jpg",
+		"eventDate": "2022-09-21",
+		"eventType": "Offline",
+		"eventStatus": "Active",
+		"userId": 1,
+		"gameId": 1
+	},
+	{
+		"name": "ONE Esports Dota 2 Invitationals",
+		"description": "ONE Esports partner with PGL to bring a new series of $500,000 USD tournaments for Dota 2.[1] The ONE Esports Dota 2 Invitational Jakarta, held in the Indonesia Convention Exhibition, will have 12 of the world's best team clash in November 2020.",
+		"totalPrize": 18000000,
+		"eventPoster": "https://static.republika.co.id/uploads/images/inpicture_slide/one-esports-dota_200304211713-772.jpg",
+		"eventDate": "2022-11-23",
+		"eventType": "Offline",
+		"eventStatus": "Active",
+		"userId": 1,
+		"gameId": 4
+	},
+	{
+		"name": "Valorant 5v5 - Monday",
+		"description": "Free-to-enter Single Elimination 5v5 mode. All games are played as BO1.",
+		"totalPrize": 30000000,
+		"eventPoster": "https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt3fffb73d23d87d08/5efb8b0540426d0f56b44fe8/SUB_KV.jpg",
+		"eventDate": "2022-11-07",
+		"eventType": "Offline",
+		"eventStatus": "Active",
+		"userId": 1,
+		"gameId": 5
+	},
+	{
+		"name": "CS:GO 5v5 - Okey Team, Follow my Command",
+		"description": "All weapons that are obtainable in this game mode are allowed to be used.",
+		"totalPrize": 20000000,
+		"eventPoster": "https://miro.medium.com/max/800/1*UMKvTYLBrQycJ11Z3AFayg.jpeg",
+		"eventDate": "2022-11-8",
+		"eventType": "Offline",
+		"eventStatus": "Active",
+		"userId": 1,
+		"gameId": 6
+	},
+	{
+		"name": "League of Legends: Wild Rift - Interational E-Sports",
+		"description": "All weapons that are obtainable in this game mode are allowed to be used.",
+		"totalPrize": 50000000,
+		"eventPoster": "https://miro.medium.com/max/800/1*UMKvTYLBrQycJ11Z3AFayg.jpeg",
+		"eventDate": "2022-11-15",
+		"eventType": "Offline",
+		"eventStatus": "Active",
+		"userId": 1,
+		"gameId": 1
+	},
+	{
+		"name": "League of Legends: Wild Rift - SEA E-Sports",
+		"description": "All weapons that are obtainable in this game mode are allowed to be used.",
+		"totalPrize": 30000000,
+		"eventPoster": "https://miro.medium.com/max/800/1*UMKvTYLBrQycJ11Z3AFayg.jpeg",
+		"eventDate": "2022-12-20",
+		"eventType": "Offline",
+		"eventStatus": "Active",
+		"userId": 1,
+		"gameId": 1
+	}
+]

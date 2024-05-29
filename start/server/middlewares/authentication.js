@@ -1,54 +1,43 @@
 const { verifyToken } = require('../helpers/jwt')
 const { User } = require('../models')
+
 const authentication = async (req, res, next) => {
     try {
-        const { authorization } = req.headers // proses destruct token dari headers
-        console.log(req.headers);
+        const { authorization } = req.headers
 
-        if (!authorization) {
-            throw new Error('Unauthorized')
-        }
+        if (!authorization) throw { name: "Unauthorized" }
 
-        const access_token = authorization.split(" ")[1] // proses split token karena ada "Bearer" di tokennya, kita cuman mau ambil hasil encodingnya aja
+        const access_token = authorization.split(' ')[1]
 
-        const verified = verifyToken(access_token) // proses decode access_token
-        console.log(verified);
-        const user = await User.findByPk(verified.id)
+        const payload = verifyToken(access_token)
 
-        if (!user) {
-            throw new Error('NotFound')
-        }
+        const user = await User.findOne({
+            where: {
+                email: payload.email
+            }
+        })
 
-        const { id, username, role } = verified
+        if (!user) throw { name: "Unauthorized" }
 
         req.loginInfo = {
-            userId: id,
-            username,
-            role
+            userId: user.id,
+            email: user.email,
+            role: user.role
         }
 
         next()
     } catch (err) {
-        console.log(err);
         let status = 500
         let message = 'Internal Server Error'
 
-        if (err.message == 'Unauthorized') {
-            status = 401
+        if (err.name == 'Unauthorized' || err.name == 'JsonWebTokenError') {
             message = 'Please login first'
-        }
-
-        if (err.name == 'JsonWebTokenError') {
             status = 401
-            message = 'Please login first'
         }
 
-        if (err.message == 'NotFound') {
-            status = 404
-            message = 'Data not found'
-        }
-
-        res.status(status).json({ message })
+        res.status(status).json({
+            message
+        })
     }
 }
 

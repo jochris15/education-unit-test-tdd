@@ -23,4 +23,3 @@ describe.only('mathematical operation', () => {
         expect(multiply(10, 5)).toBe(50)
     })
 })
-
