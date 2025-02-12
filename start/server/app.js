@@ -72,3 +72,4 @@ app.get('/events', async (req, res, next) => {
 app.listen(port, () => {
     console.log(`http://localhost:${port}`)
 })
+

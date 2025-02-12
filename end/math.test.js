@@ -19,7 +19,7 @@ describe.only('mathematical operation', () => {
     });
 
     it('multiply 3 * 5 to equal 15', () => {
-        expect(multiply(3, 5)).toBe(15)
-        expect(multiply(10, 5)).toBe(50)
+        expect(multiply(3, 5)).toEqual(15)
+        expect(multiply(10, 5)).toEqual(50)
     })
 })

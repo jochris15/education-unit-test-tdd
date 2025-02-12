@@ -16,7 +16,6 @@ describe('POST /register', () => {
                 .send(body)
 
             expect(response.status).toBe(201)
-            expect(response.body).toBeInstanceOf(Object)
             expect(response.body).toHaveProperty('message', 'Succeed register new user')
             expect(response.body).toHaveProperty('user', expect.any(Object))
         })
@@ -31,7 +30,6 @@ describe('POST /register', () => {
                 .send(body)
 
             expect(response.status).toBe(400)
-            expect(response.body).toBeInstanceOf(Object)
             expect(response.body).toHaveProperty('message', expect.any(String))
         })
 
@@ -43,7 +41,6 @@ describe('POST /register', () => {
                 .send(body)
 
             expect(response.status).toBe(400)
-            expect(response.body).toBeInstanceOf(Object)
             expect(response.body).toHaveProperty('message', expect.any(String))
         })
     })

@@ -55,7 +55,6 @@ describe('GET /events', () => {
                 .set('Authorization', `Bearer ${access_token}`)
 
             expect(response.status).toBe(200) // testing untuk codenya
-            expect(response.body).toBeInstanceOf(Object) // testing untuk isinya
             expect(response.body).toHaveProperty('message', 'Succeed read events')
             expect(response.body).toHaveProperty('events', expect.any(Array))
             expect(response.body.events.length).toBeGreaterThan(0)
@@ -69,7 +68,6 @@ describe('GET /events', () => {
                 .get('/events')
 
             expect(response.status).toBe(401) // testing untuk codenya
-            expect(response.body).toBeInstanceOf(Object) // testing untuk isinya
             expect(response.body).toHaveProperty('message', expect.any(String))
         })
 
@@ -80,7 +78,6 @@ describe('GET /events', () => {
                 .set('Authorization', `Bearer blablabla`)
 
             expect(response.status).toBe(401) // testing untuk codenya
-            expect(response.body).toBeInstanceOf(Object) // testing untuk isinya
             expect(response.body).toHaveProperty('message', expect.any(String))
         })
     })

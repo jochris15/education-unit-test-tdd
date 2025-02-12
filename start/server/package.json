@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test" : "jest --detectOpenHandles --forceExit",
+    "dropTest": "sequelize db:drop --env test",
+    "dbTest": "sequelize db:create --env test",
+    "migrateTest": "sequelize db:migrate --env test"
   },
   "keywords": [],
   "author": "",
