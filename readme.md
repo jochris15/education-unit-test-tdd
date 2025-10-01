@@ -130,7 +130,6 @@ untuk mengecheck ekspektasi dari endpoint kita, kita akan mengecheck hasil dari 
 
 ```js
 expect(response.status).toBe(201) // untuk mengecheck status codenya
-expect(response.body).toBeInstanceOf(Object) // untuk mengecheck dia object atau bukan
 expect(response.body).toHaveProperty('message', expect.any(String)) // untuk mengecheck isi dari objectnya memiliki property message dan isi messagenya string apapun
 ```
 

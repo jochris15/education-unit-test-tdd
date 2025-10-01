@@ -29,7 +29,7 @@ beforeAll(async () => {
     await sequelize.queryInterface.bulkInsert('Games', games, {})
     await sequelize.queryInterface.bulkInsert('Events', events, {})
 
-    // access token
+    // access token sesuai data seeding
     const payload = {
         id: 1,
         email: 'user1@mail.com',
