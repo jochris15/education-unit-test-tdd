@@ -4,7 +4,7 @@
   "description": "## Pyramid of testing ![pyramid-testing](./pyramidtest.jpg)",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --runInBand --forceExit --detectOpenHandle"
   },
   "keywords": [],
   "author": "",
